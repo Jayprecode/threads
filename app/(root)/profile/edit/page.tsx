@@ -4,8 +4,6 @@ import { redirect } from "next/navigation";
 import { fetchUser } from "@/lib/actions/user.actions";
 import AccountProfile from "@/components/forms/AccountProfile";
 
-// Copy paste most of the code as it is from the /onboarding
-
 const Page = async () => {
 	const user = await currentUser();
 	if (!user) return null;
