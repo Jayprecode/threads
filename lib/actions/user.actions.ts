@@ -40,3 +40,14 @@ export const updateUser = async ({ userId, username, name, bio, image, path }: P
 		throw new Error(`Error creating/updating user: ${error.message}`);
 	}
 };
+
+export const fetchUser = async (userId: string) => {
+	try {
+		connectToDB();
+
+		return await User.findOne({ id: userId });
+	} catch (error: any) {
+		console.error(error);
+		throw new Error(`Error fetching user: ${error.message}`);
+	}
+};
