@@ -27,9 +27,6 @@ const nextConfig = {
 				hostname: "utfs.io",
 			},
 		],
-		typescript: {
-			ignoreBuildErrors: true,
-		},
 	},
 };
 
